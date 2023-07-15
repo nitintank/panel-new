@@ -636,6 +636,7 @@ button a{
 .dropdown-container1 {
     display: none;
     position: absolute;
+    top: 50px;
     right: 0px;
     width: 205px;
   }
@@ -644,7 +645,7 @@ button a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 16px;
-    color: var(--black-light-color);  
+    color: white;  
     display: block;
     border: none;
     background: none;

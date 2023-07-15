@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="add-entry.css">
-     
+
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>ADD ENTRY</title> 
+    <title>ADD ENTRY</title>
 </head>
+
 <body>
     <nav>
         <a href="/index.html" style="text-decoration: none;">
@@ -72,8 +74,9 @@
                         <span class="link-name">TRANSACTION</span>
                     </a></li>
                     <div class="dropdown-container">
-                        <a href="add-entry.html">ASSIGN SITES/BANKS</a>
-                        <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
+                        <a href="add-sites.html">ASSIGN SITES</a>
+                        <a href="add-entry.html">ASSIGN PAYMENTS</a>
+                        <a href="deassign-banks.html">DE-ASSIGN PAYMENTS</a>
                         <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
                         <a href="settlement-entry.html">SETTLEMENT ENTRY</a>
                         <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
@@ -129,7 +132,10 @@
             <div style="display: flex; align-items: center; gap: 20px;">
                 <a href="/wallet.html"><img src="/Images/wallet.png" alt=""></a>
                 <div style="position: relative;">
-                    <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
+                    <div class="dropdown-btn" style="display: flex; align-items: center; gap: 10px;">
+                        <img src="/Images/profile.jpg" alt="" style="cursor: pointer;">
+                        <h1 style="color: white;">ADMIN</h1>
+                    </div>
                     <div class="dropdown-container1">
                         <div class="cardContainer5">
                             <div class="card5" style="height: 150px;">
@@ -145,233 +151,374 @@
 
         <div class="dash-content">
             <div class="main2">
-                <input class="check" type="checkbox" id="checkbox_toggle" onclick="ab()">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openCity(event, 'London')">BANK</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">WALLET</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">AGENT</button>
+                </div>
+
+                <!-- <input class="check" type="checkbox" id="checkbox_toggle" onclick="ab()">
                 <div class="checkbox">
-                  <label for="checkbox_toggle" class="slide">
-                    <label for="checkbox_toggle" class="toggle"></label>
-                    <label for="checkbox_toggle" class="text">SITES</label>
-                    <label for="checkbox_toggle" class="text">BANKS</label>
-                  </label>
-                </div>
-                <div class="cardContainer2" id="ab">
-                    <div class="card2">
-                        <p class="temp2">ASSIGN SITES TO MASTER</p>
+                    <label for="checkbox_toggle" class="slide">
+                        <label for="checkbox_toggle" class="toggle"></label>
+                        <label for="checkbox_toggle" class="text">SITES</label>
+                        <label for="checkbox_toggle" class="text">BANKS</label>
+                    </label>
+                </div> -->
+
+                <div id="London" class="tabcontent" style="display: block;">
+                    <div class="cardContainer2" id="ab">
+                        <div class="card2">
+                            <p class="temp2">ASSIGN BANK TO MASTER</p>
                             <table>
                                 <thead>
                                     <tr>
                                         <th>DATE</th>
                                         <th>MASTER NAME</th>
-                                        <th>USER NAME</th>
-                                        <th>SITE NAME</th>
-                                        <th>SHARING</th>
-                                        <th>SUBMIT</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="date"></td>
-                                        <td><input type="text" placeholder="Master Name"></td>
-                                        <td><input type="text" placeholder="Username"></td>
-                                        <td><input type="text" placeholder="Site Name"></td>
-                                        <td><input type="text" placeholder="Sharing"></td>
-                                        <td><button>
-                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">SUBMIT</span>
-                                        </button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                    </div>
-                </div>
-                <div class="cardContainer2 hide" id="abc">
-                    <div class="card2">
-                        <p class="temp2">ASSIGN BANKS TO CLIENT</p>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>DATE</th>
-                                        <th>MASTER NAME</th>
-                                        <th>USER NAME</th>
                                         <th>BANK NAME</th>
-                                        <th>SUBMIT</th>
+                                        <th>OPENING BALANCE</th>
+                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td><input type="date"></td>
                                         <td><input type="text" placeholder="Master Name"></td>
-                                        <td><input type="text" placeholder="User Name"></td>
                                         <td><input type="text" placeholder="Bank Name"></td>
-                                        <td><button>
-                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">SUBMIT</span>
-                                        </button></td>
+                                        <td><input type="text" placeholder="Opening Balance"></td>
+                                        <td><button class="bta">
+                                                <span class="text"><img src="/Images/plus.png" alt=""
+                                                        style="width: 20px; height: 20px;">SUBMIT</span>
+                                            </button></td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="main2">
-                <div class="cardContainer2" id="qw">
-                    <div class="card2">
-                        <div class="search">
-                            <input type="text" placeholder="Search Here">
-                            <div class="search-round">
-                                <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
+                    <div class="main2">
+                        <div class="cardContainer2" id="qw">
+                            <div class="card2">
+                                <div class="search">
+                                    <input type="text" placeholder="Search Here">
+                                    <div class="search-round">
+                                        <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
+                                    </div>
+                                </div>
+                                <p class="temp2">ASSIGNED BANKS</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sr No.</th>
+                                            <th>DATE</th>
+                                            <th>MASTER NAME</th>
+                                            <th>BANK NAME</th>
+                                            <th>OPENING BALANCE</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="export">
+                                    <p class="temp1">EXPORT AS -</p>
+                                    <button class="bta">
+                                        <span class="text"><img src="/Images/sheets.png" alt=""
+                                                style="width: 25px; height: 25px;">EXCEL</span>
+                                    </button>
+                                    <button class="bta">
+                                        <span class="text"><img src="/Images/pdf.png" alt=""
+                                                style="width: 25px; height: 25px;">PDF</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <p class="temp2">ASSIGNED REPORT</p>
+                    </div>
+                </div>
+
+                <div id="Paris" class="tabcontent">
+                    <div class="cardContainer2" id="abc">
+                        <div class="card2">
+                            <p class="temp2">ASSIGN WALLET TO MASTER</p>
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Sr No.</th>
                                         <th>DATE</th>
                                         <th>MASTER NAME</th>
-                                        <th>USERNAME</th>
-                                        <th>SITE NAME</th>
-                                        <th>SHARING</th>
-                                        <th>EDIT</th>
+                                        <th>WALLET NAME</th>
+                                        <th>OPENING BALANCE</th>
+                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td>80</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td>80</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td>80</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td>80</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td>80</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td><input type="date"></td>
+                                        <td><input type="text" placeholder="Master Name"></td>
+                                        <td><input type="text" placeholder="Wallet Name"></td>
+                                        <td><input type="text" placeholder="Opening Balance"></td>
+                                        <td><button class="bta">
+                                                <span class="text"><img src="/Images/plus.png" alt=""
+                                                        style="width: 20px; height: 20px;">SUBMIT</span>
+                                            </button></td>
                                     </tr>
                                 </tbody>
                             </table>
-        
-                            <div class="export">
-                            <p class="temp1">EXPORT AS -</p>
-                            <button>
-                                <span class="text"><img src="/Images/sheets.png" alt="" style="width: 25px; height: 25px;">EXCEL</span>
-                            </button>
-                            <button>
-                                <span class="text"><img src="/Images/pdf.png" alt="" style="width: 25px; height: 25px;">PDF</span>
-                            </button>
+                        </div>
+                    </div>
+
+                    <div class="main2">
+                        <div class="cardContainer2" id="qwe">
+                            <div class="card2">
+                                <div class="search">
+                                    <input type="text" placeholder="Search Here" style="width: 160px;">
+                                    <div class="search-round">
+                                        <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
+                                    </div>
+                                </div>
+                                <p class="temp2">ASSIGNED WALLETS</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sr No.</th>
+                                            <th>DATE</th>
+                                            <th>MASTER NAME</th>
+                                            <th>WALLET NAME</th>
+                                            <th>OPENING BALANCE</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="export">
+                                    <p class="temp1">EXPORT AS -</p>
+                                    <button class="bta">
+                                        <span class="text"><img src="/Images/sheets.png" alt=""
+                                                style="width: 25px; height: 25px;">EXCEL</span>
+                                    </button>
+                                    <button class="bta">
+                                        <span class="text"><img src="/Images/pdf.png" alt=""
+                                                style="width: 25px; height: 25px;">PDF</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="cardContainer2 hide" id="qwe">
-                    <div class="card2">
-                        <div class="search">
-                            <input type="text" placeholder="Search Here" style="width: 160px;">
-                            <div class="search-round">
-                                <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
-                            </div>
-                        </div>
-                        <p class="temp2">ASSIGNED BANK REPORTS</p>
+
+                <div id="Tokyo" class="tabcontent">
+                    <div class="cardContainer2" id="abc">
+                        <div class="card2">
+                            <p class="temp2">ASSIGN AGENTS TO MASTER</p>
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Sr No.</th>
                                         <th>DATE</th>
                                         <th>MASTER NAME</th>
-                                        <th>USERNAME</th>
-                                        <th>BANK NAME</th>
-                                        <th>EDIT</th>
+                                        <th>AGENT NAME</th>
+                                        <th>OPENING BALANCE</th>
+                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>11-04-23</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>99999</td>
-                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td><input type="date"></td>
+                                        <td><input type="text" placeholder="Master Name"></td>
+                                        <td><input type="text" placeholder="Agent Name"></td>
+                                        <td><input type="text" placeholder="Opening Balance"></td>
+                                        <td><button class="bta">
+                                                <span class="text"><img src="/Images/plus.png" alt=""
+                                                        style="width: 20px; height: 20px;">SUBMIT</span>
+                                            </button></td>
                                     </tr>
                                 </tbody>
                             </table>
-        
-                            <div class="export">
-                            <p class="temp1">EXPORT AS -</p>
-                            <button>
-                                <span class="text"><img src="/Images/sheets.png" alt="" style="width: 25px; height: 25px;">EXCEL</span>
-                            </button>
-                            <button>
-                                <span class="text"><img src="/Images/pdf.png" alt="" style="width: 25px; height: 25px;">PDF</span>
-                            </button>
+                        </div>
+                    </div>
+
+                    <div class="main2">
+                        <div class="cardContainer2" id="qwe">
+                            <div class="card2">
+                                <div class="search">
+                                    <input type="text" placeholder="Search Here" style="width: 160px;">
+                                    <div class="search-round">
+                                        <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
+                                    </div>
+                                </div>
+                                <p class="temp2">ASSIGNED AGENTS</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sr No.</th>
+                                            <th>DATE</th>
+                                            <th>MASTER NAME</th>
+                                            <th>AGENT NAME</th>
+                                            <th>OPENING BALANCE</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>11-04-23</td>
+                                            <td>HDFC</td>
+                                            <td>VIJAY</td>
+                                            <td>99999</td>
+                                            <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="export">
+                                    <p class="temp1">EXPORT AS -</p>
+                                    <button class="bta">
+                                        <span class="text"><img src="/Images/sheets.png" alt=""
+                                                style="width: 25px; height: 25px;">EXCEL</span>
+                                    </button>
+                                    <button class="bta">
+                                        <span class="text"><img src="/Images/pdf.png" alt=""
+                                                style="width: 25px; height: 25px;">PDF</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
+
             <script>
-                let ab=()=>{
+                let ab = () => {
                     let ab = document.getElementById("ab");
                     let abc = document.getElementById("abc");
                     let qw = document.getElementById("qw");
@@ -380,6 +527,21 @@
                     abc.classList.toggle("hide");
                     qw.classList.toggle("hide");
                     qwe.classList.toggle("hide");
+                }
+            </script>
+            <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
                 }
             </script>
 
@@ -391,18 +553,19 @@
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
-        
+
         for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-            } else {
-              dropdownContent.style.display = "block";
-            }
-          });
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
         }
-        </script>
+    </script>
 </body>
+
 </html>

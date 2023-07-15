@@ -834,6 +834,7 @@ textarea{
     display: none;
     position: absolute;
     right: 0px;
+    top: 50px;
     width: 205px;
   }
 
@@ -841,7 +842,7 @@ textarea{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 16px;
-    color: var(--black-light-color);  
+    color: white;  
     display: block;
     border: none;
     background: none;
