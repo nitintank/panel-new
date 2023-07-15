@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="expences-report.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>EXPENCES REPORT</title> 
+</head>
+<body>
+    <nav>
+        <a href="/index.html" style="text-decoration: none;">
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img src="/Images/logo.png" alt="">
+                </div>
+
+                <span class="logo_name">ShyamPlay</span>
+            </div>
+        </a>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">MASTER</span>
+                    </a>
+                </li>
+                <div class="dropdown-container">
+                    <a href="/add-user.html">ADD MASTER</a>
+                    <a href="/view-edit-user.html">VIEW/EDIT MASTER</a>
+                    <a href="/add-dealer.html">ADD DEALER</a>
+                    <a href="/view-edit-dealer.html">VIEW/EDIT DEALER</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-globe"></i>
+                        <span class="link-name">SITE</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-site.html">ADD SITE</a>
+                    <a href="view-edit-site.html">VIEW/EDIT SITE</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-university"></i>
+                        <span class="link-name">BANK/CASH</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-bank.html">ADD BANK</a>
+                    <a href="view-edit-bank.html">VIEW/EDIT BANK</a>
+                    <a href="add-wallet.html">ADD WALLET</a>
+                    <a href="view-edit-wallet.html">VIEW/EDIT WALLET</a>
+                    <a href="add-agent.html">ADD AGENT</a>
+                    <a href="view-edit-agent.html">VIEW/EDIT AGENT</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name">PARTY/EXP</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-party.html">ADD PARTY</a>
+                    <a href="add-expences.html">ADD EXPENCES</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-money-withdrawal"></i>
+                        <span class="link-name">TRANSACTION</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-entry.html">ASSIGN SITES/BANKS</a>
+                    <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
+                    <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
+                    <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
+                    <a href="add-journal-entry.html">ADD JOURNAL ENTRY</a>
+                    <a href="chip-management.html">CHIP MANAGEMENT</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-file-graph"></i>
+                        <span class="link-name">REPORT</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="free-chips-report.html">FREE CHIPS REPORT</a>
+                    <!-- <a href="entry-report.html">ENTRY REPORT</a> -->
+                    <!-- <a href="client-trf-report.html">CLIENT TRF REPORT</a> -->
+                    <a href="expences-report.html">EXPENCES REPORT</a>
+                    <a href="contra-report.html">CONTRA REPORT</a>
+                    <a href="bank-ledger-report.html">BANK LEDGER REPORT</a>
+                    <!-- <a href="bonus-report.html">BONUS REPORT</a> -->
+                    <a href="journal-report.html">JOURNAL REPORT</a>
+                </div>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <div style="position: relative;">
+                <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
+                <div class="dropdown-container1">
+                    <div class="cardContainer5">
+                        <div class="card5" style="height: 150px;">
+                            <a href="/login-history.html">LOGIN HISTORY</a>
+                            <a href="/change-password.html">CHANGE PASSWORD</a>
+                            <a href="#">LOG OUT <i class="uil uil-signout"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-content">
+            <div class="main2">
+                <div class="cardContainer2" id="ab" style="width:auto;">
+                    <div class="card2">
+                        <p class="temp2">EXPENCES REPORT</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>FROM DATE</th>
+                                        <th>TO DATE</th>
+                                        <th>DEBIT ACCOUNT</th>
+                                        <th>SUBMIT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="date"></td>
+                                        <td><input type="date"></td>
+                                        <td><input type="text" placeholder="Debit Account"></td>
+                                        <td><button>
+                                            <span class="text"><img src="/Images/submit.png" alt="" style="width: 30px; height: 30px;">SUBMIT</span>
+                                        </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main2">
+                <div class="cardContainer2" id="qw">
+                    <div class="card2">
+                        <div class="search">
+                            <input type="text" placeholder="Search Here">
+                            <div class="search-round">
+                                <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
+                            </div>
+                        </div>
+                        <p class="temp2">ENTRY</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sr No.</th>
+                                        <th>DATE</th>
+                                        <th>DEBIT ACCOUNT</th>
+                                        <th>PARTY/EXP</th>
+                                        <th>AMOUNT</th>
+                                        <th>REMARK</th>
+                                        <th>BALANCE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+        
+                            <div class="export">
+                            <p class="temp1">EXPORT AS -</p>
+                            <button>
+                                <span class="text"><img src="/Images/sheets.png" alt="" style="width: 25px; height: 25px;">EXCEL</span>
+                            </button>
+                            <button>
+                                <span class="text"><img src="/Images/pdf.png" alt="" style="width: 25px; height: 25px;">PDF</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="view-edit-agent.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>VIEW/EDIT AGENT</title> 
+</head>
+<body>
+    <nav>
+        <a href="/index.html" style="text-decoration: none;">
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img src="/Images/logo.png" alt="">
+                </div>
+
+                <span class="logo_name">ShyamPlay</span>
+            </div>
+        </a>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">MASTER</span>
+                    </a>
+                </li>
+                <div class="dropdown-container">
+                    <a href="/add-user.html">ADD MASTER</a>
+                    <a href="/view-edit-user.html">VIEW/EDIT MASTER</a>
+                    <a href="/add-dealer.html">ADD DEALER</a>
+                    <a href="/view-edit-dealer.html">VIEW/EDIT DEALER</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-globe"></i>
+                        <span class="link-name">SITE</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-site.html">ADD SITE</a>
+                    <a href="view-edit-site.html">VIEW/EDIT SITE</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-university"></i>
+                        <span class="link-name">BANK/CASH</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-bank.html">ADD BANK</a>
+                    <a href="view-edit-bank.html">VIEW/EDIT BANK</a>
+                    <a href="add-wallet.html">ADD WALLET</a>
+                    <a href="view-edit-wallet.html">VIEW/EDIT WALLET</a>
+                    <a href="add-agent.html">ADD AGENT</a>
+                    <a href="view-edit-agent.html">VIEW/EDIT AGENT</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name">PARTY/EXP</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-party.html">ADD PARTY</a>
+                    <a href="add-expences.html">ADD EXPENCES</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-money-withdrawal"></i>
+                        <span class="link-name">TRANSACTION</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="add-entry.html">ASSIGN SITES/BANKS</a>
+                    <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
+                    <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
+                    <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
+                    <a href="add-journal-entry.html">ADD JOURNAL ENTRY</a>
+                    <a href="chip-management.html">CHIP MANAGEMENT</a>
+                </div>
+                <li class="dropdown-btn"><a href="#">
+                        <i class="uil uil-file-graph"></i>
+                        <span class="link-name">REPORT</span>
+                    </a></li>
+                <div class="dropdown-container">
+                    <a href="free-chips-report.html">FREE CHIPS REPORT</a>
+                    <!-- <a href="entry-report.html">ENTRY REPORT</a> -->
+                    <!-- <a href="client-trf-report.html">CLIENT TRF REPORT</a> -->
+                    <a href="expences-report.html">EXPENCES REPORT</a>
+                    <a href="contra-report.html">CONTRA REPORT</a>
+                    <a href="bank-ledger-report.html">BANK LEDGER REPORT</a>
+                    <!-- <a href="bonus-report.html">BONUS REPORT</a> -->
+                    <a href="journal-report.html">JOURNAL REPORT</a>
+                </div>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <div style="position: relative;">
+                <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
+                <div class="dropdown-container1">
+                    <div class="cardContainer5">
+                        <div class="card5" style="height: 150px;">
+                            <a href="/login-history.html">LOGIN HISTORY</a>
+                            <a href="/change-password.html">CHANGE PASSWORD</a>
+                            <a href="#">LOG OUT <i class="uil uil-signout"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-content">
+            <div class="main2" id="blur">
+                <div class="cardContainer2">
+                    <div class="card2">
+                        <div class="search">
+                            <input type="text" placeholder="Search Here">
+                            <div class="search-round">
+                                <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
+                            </div>
+                        </div>
+                        <p class="temp2">AGENT LIST</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sr No.</th>
+                                        <th>AGENT NAME</th>
+                                        <th>PRIMARY NUMBER</th>
+                                        <th>ALTERNATE NUMBER</th>
+                                        <th>ADDRESS</th>
+                                        <th>CITY</th>
+                                        <th>PINCODE</th>
+                                        <th>OPENING BALANCE</th>
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>Dhanshree Tower, Vidhyadhar Nagar</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>₹10000</td>
+                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>88888</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>₹10000</td>
+                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>88888</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>₹10000</td>
+                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>88888</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>₹10000</td>
+                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>HDFC</td>
+                                        <td>VIJAY</td>
+                                        <td>99999</td>
+                                        <td>88888</td>
+                                        <td>DELHI</td>
+                                        <td>ABCD</td>
+                                        <td>₹10000</td>
+                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+        
+                            <div class="export">
+                            <p class="temp1">EXPORT AS -</p>
+                            <button class="btn">
+                                <span class="text"><img src="/Images/sheets.png" alt="" style="width: 25px; height: 25px;">EXCEL</span>
+                            </button>
+                            <button class="btn">
+                                <span class="text"><img src="/Images/pdf.png" alt="" style="width: 25px; height: 25px;">PDF</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop" id="popup">
+                <div class="main">
+                    <div class="cardContainer">
+                        <div class="card">
+                            <img src="/Images/agent.png" alt="">
+                            <p class="temp">MODIFY AGENT</p>
+                            <div class="cross" onclick="cross()">
+                                <img src="/Images/cancel.png" alt="" style="width: 40px; height: 40px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="box">
+                    <form>
+                        <div class="form-in">
+                            <label for="client-name">AGENT NAME</label>
+                            <input type="text" placeholder="Client Name" id="client-name">
+                        </div>
+                        <div class="form-in">
+                            <label for="primary">PRIMARY NUMBER</label>
+                            <input type="text" placeholder="Primary Number" id="primary">
+                        </div>
+                        <div class="form-in">
+                            <label for="alternate">ALTERNATE NAME</label>
+                            <input type="text" placeholder="Alternate Name" id="alternate">
+                        </div>
+                        <div class="form-in">
+                            <label for="address">ADDRESS</label>
+                            <!-- <input type="text" placeholder="Address" id="address"> -->
+                            <textarea name="" id="address" cols="30" rows="4"></textarea>
+                        </div>
+                        <div class="form-in">
+                            <label for="city">CITY</label>
+                            <input type="text" placeholder="City" id="city">
+                        </div>
+                        <div class="form-in">
+                            <label for="pincode">PINCODE</label>
+                            <input type="text" placeholder="Pincode" id="pincode">
+                        </div>
+                        <div class="form-in">
+                            <label for="opening-balance">OPENING BALANCE</label>
+                            <input type="text" placeholder="Opening Balance" id="opening-balance">
+                        </div>
+            
+                        <button class="bt" style="display: flex; align-items: center; justify-content: center; gap: 10px;"><img src="/Images/checked.png" alt="" style="width: 25px; height: 25px;">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+
+        function popup() {
+            let popup = document.getElementById('popup')
+            let blur = document.getElementById('blur')
+            popup.style.display = "flex"
+            blur.style.filter = "blur(8px)"
+        }
+        function cross() {
+            let popup = document.getElementById('popup')
+            let blur = document.getElementById('blur')
+            popup.style.display = "none"
+            blur.style.filter = "blur(0px)"
+        }
+        </script>
+</body>
+</html>
