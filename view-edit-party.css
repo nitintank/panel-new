@@ -499,7 +499,6 @@ nav.close ~ .dashboard .top{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
   }
   
   .card2 {
@@ -560,7 +559,7 @@ tbody td {
   text-align: center;
 }
 tbody td input{
-    width: 100%;
+    width: 50%;
     padding: 5px;
   }
 
@@ -568,7 +567,7 @@ tbody td input{
 
 .search{
     position: absolute;
-    top: 12px;
+    top: 30px;
     right: 10px;
 }
 
@@ -595,7 +594,7 @@ tbody td input{
 
 /* Button */
 
-button {
+.btn {
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   border: 0;
@@ -620,12 +619,12 @@ button {
   transition: all .3s;
  }
  
- button:active,
- button:hover {
+ .btn:active,
+ .btn:hover {
   outline: 0;
  }
  
- button span {
+ .btn span {
   background-color: rgb(5, 6, 45);
   padding: 10px 20px;
   border-radius: 6px;
@@ -637,11 +636,11 @@ button {
   gap: 10px;
  }
  
- button:hover span {
+ .btn:hover span {
   background: none;
  }
  
- button:active {
+ .btn:active {
   transform: scale(0.9);
  }
 
@@ -653,80 +652,174 @@ button {
   padding: 10px;
  }
 
- input{
+  /* Content Box */
+.main{
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.cardContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    width: 450px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    cursor: pointer;
+    gap: 10px;
+  }
+
+  .card img{
+    width: 70px;
+    height: 70px;
+  }
+  
+  .temp {
+    font-size: 2.5em;
+    color: white;
+  }
+  
+  .cardContainer::before {
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    background-color: rgb(144, 161, 255);
+    z-index: -1;
+    border-radius: 50%;
+    right: 20px;
+    top: 20px;
+    transition: all 1s;
+  }
+
+  .cardContainer::after {
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    background-color: rgb(144, 161, 255);
+    z-index: -1;
+    border-radius: 50%;
+    left: 20px;
+    top: 20px;
+    transition: all 1s;
+  }
+  
+  .cardContainer:hover::before {
+    transform: translate(-20px ,20px);
+  }
+
+  .cardContainer:hover::after {
+    transform: translate(20px ,20px);
+  }
+
+/* Form */
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    height: auto;
+    width: 450px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 30px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.form-in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+label{
     /* display: block; */
-    width: 400px;
-    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    /* display: block; */
+    height: 40px;
+    width: 55%;
+    background-color: rgba(255,255,255,0.07);
     border-radius: 3px;
     padding: 0 10px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
 }
 ::placeholder{
-    color: #303030;
+    color: #e5e5e5;
+}
+.bt{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Toggle Box */
+.bt a{
+    color: black;
+    text-decoration: none;
+}
 
-.checkbox {
-    width: 223px;
-    height: 60px;
-    background-color: #0a1929;
-    color: #fff;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  #checkbox_toggle {
+/* PopUp Box */
+
+.pop{
+    height: 100vh;
+    width: 95%;
     display: none;
-  }
-  
-  .checkbox .toggle {
-    width: 105px;
-    height: 50px;
-    position: absolute;
-    border-radius: 30px;
-    left: 5px;
-    cursor: pointer;
-    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
-    box-shadow: -0px -0px 10px #8983F7, -0px -0px 30px #8983F7;
-    transition: 0.4s;
-    /* box-shadow: 0px 0px 10px rgb(255, 255, 20), 0px 0px 30px rgb(255, 255, 20); */
-  }
-  
-  .checkbox .slide {
-    width: 230px;
-    height: 60px;
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
-  }
-  
-  .checkbox .slide .text {
-    font-size: 16px;
-    font-weight: 700;
-    z-index: 100;
-    cursor: pointer;
-  }
-  
-  .check:checked + .checkbox .slide .toggle {
-    transform: translateX(105px);
-    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
-    box-shadow: -0px -0px 10px #8983F7, -0px -0px 30px #8983F7;
-  }
-  
-  .check:checked + .checkbox .slide {
-    background-color: #0a1929;
-    color: #fff;
-  }
+    position: absolute;
+    top: 0px;
+}
 
-  .hide{
-    display: none;
-  }
+.cross{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
-  .dropdown-container1 {
+.dropdown-container1 {
     display: none;
     position: absolute;
     right: 0px;
@@ -770,3 +863,13 @@ button {
     cursor: pointer;
     gap: 10px;
   }
+
+  textarea{
+    /* display: block; */
+    width: 55%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+}

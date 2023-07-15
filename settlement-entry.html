@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="view-edit-dealer.css">
+    <link rel="stylesheet" href="settlement-entry.css">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>VIEW/EDIT DEALER</title> 
+    <title>ADD FREE CHIPS</title> 
 </head>
 <body>
     <nav>
@@ -144,8 +144,46 @@
         </div>
 
         <div class="dash-content">
-            <div class="main2" id="blur">
-                <div class="cardContainer2">
+            <div class="main2">
+                <div class="cardContainer2" id="ab">
+                    <div class="card2">
+                        <p class="temp2">CASH SETTLEMENT ENTRY</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>DATE</th>
+                                        <th>SITE NAME</th>
+                                        <th>MASTER NAME</th>
+                                        <th>%</th>
+                                        <th>P/S</th>
+                                        <th>L/S</th>
+                                        <th>FREE CHIPS</th>
+                                        <th>DESCRIPTION</th>
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="date"></td>
+                                        <td><input type="text" placeholder="Site Name"></td>
+                                        <td><input type="text" placeholder="Master Name"></td>
+                                        <td><input type="text" placeholder="Sharing" style="width: 70px;"></td>
+                                        <td><input type="text" placeholder="P/S"></td>
+                                        <td><input type="text" placeholder="L/S"></td>
+                                        <td><input type="text" placeholder="Free Chips"></td>
+                                        <td><input type="text" placeholder="Description"></td>
+                                        <td><button>
+                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">ADD</span>
+                                        </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main2">
+                <div class="cardContainer2" id="qw">
                     <div class="card2">
                         <div class="search">
                             <input type="text" placeholder="Search Here">
@@ -153,74 +191,92 @@
                                 <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
                             </div>
                         </div>
-                        <p class="temp2">DEALER LIST</p>
+                        <p class="temp2">CASH SETTLEMENT REPORT</p>
                             <table>
                                 <thead>
                                     <tr>
                                         <th>Sr No.</th>
-                                        <th>DEALER NAME</th>
-                                        <th>CONTACT NUMBER</th>
-                                        <th>CITY</th>
-                                        <th>PARTNERSHIP</th>
+                                        <th>DATE</th>
                                         <th>SITE NAME</th>
-                                        <th>ACTION</th>
+                                        <th>MASTER NAME</th>
+                                        <th>%</th>
+                                        <th>P/S</th>
+                                        <th>L/S</th>
+                                        <th>FREE CHIPS</th>
+                                        <th>DESCRIPTION</th>
+                                        <th>EDIT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
+                                        <td>11-04-23</td>
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
-                                        <td>VIJAY2</td>
                                         <td>99999</td>
-                                        <td>₹10000</td>
-                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>ABCDEFGH</td>
+                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
+                                        <td>11-04-23</td>
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
-                                        <td>VIJAY2</td>
                                         <td>99999</td>
-                                        <td>₹10000</td>
-                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>ABCDEFGH</td>
+                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
+                                        <td>11-04-23</td>
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
-                                        <td>VIJAY2</td>
                                         <td>99999</td>
-                                        <td>₹10000</td>
-                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>ABCDEFGH</td>
+                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
+                                        <td>11-04-23</td>
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
-                                        <td>VIJAY2</td>
                                         <td>99999</td>
-                                        <td>₹10000</td>
-                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>ABCDEFGH</td>
+                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
+                                        <td>11-04-23</td>
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
-                                        <td>VIJAY2</td>
                                         <td>99999</td>
-                                        <td>₹10000</td>
-                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>99999</td>
+                                        <td>ABCDEFGH</td>
+                                        <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                 </tbody>
                             </table>
         
                             <div class="export">
                             <p class="temp1">EXPORT AS -</p>
-                            <button class="btn">
+                            <button>
                                 <span class="text"><img src="/Images/sheets.png" alt="" style="width: 25px; height: 25px;">EXCEL</span>
                             </button>
-                            <button class="btn">
+                            <button>
                                 <span class="text"><img src="/Images/pdf.png" alt="" style="width: 25px; height: 25px;">PDF</span>
                             </button>
                         </div>
@@ -228,46 +284,6 @@
                 </div>
             </div>
 
-            <div class="pop" id="popup">
-                <div class="main">
-                    <div class="cardContainer">
-                        <div class="card">
-                            <img src="/Images/dealer.png" alt="">
-                            <p class="temp">MODIFY DEALER</p>
-                            <div class="cross" onclick="cross()">
-                                <img src="/Images/cancel.png" alt="" style="width: 40px; height: 40px;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="box">
-                    <form>
-                        <div class="form-in">
-                            <label for="dealer-name">DEALER NAME</label>
-                            <input type="text" placeholder="Dealer Name" id="dealer-name">
-                        </div>
-                        <div class="form-in">
-                            <label for="contact">CONTACT NUMBER</label>
-                            <input type="text" placeholder="Contact Number" id="contact">
-                        </div>
-                        <div class="form-in">
-                            <label for="city">CITY</label>
-                            <input type="text" placeholder="City" id="city">
-                        </div>
-                        <div class="form-in">
-                            <label for="partnership">PARTNERSHIP</label>
-                            <input type="text" placeholder="Partnership" id="partnership">
-                        </div>
-                        <div class="form-in">
-                            <label for="site-name">SITE NAME</label>
-                            <input type="text" placeholder="Site Name" id="site-name">
-                        </div>
-            
-                        <button class="bt" style="display: flex; align-items: center; justify-content: center; gap: 10px;"><img src="/Images/checked.png" alt="" style="width: 25px; height: 25px;">SUBMIT</button>
-                    </form>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -287,19 +303,6 @@
               dropdownContent.style.display = "block";
             }
           });
-        }
-
-        function popup() {
-            let popup = document.getElementById('popup')
-            let blur = document.getElementById('blur')
-            popup.style.display = "flex"
-            blur.style.filter = "blur(8px)"
-        }
-        function cross() {
-            let popup = document.getElementById('popup')
-            let blur = document.getElementById('blur')
-            popup.style.display = "none"
-            blur.style.filter = "blur(0px)"
         }
         </script>
 </body>

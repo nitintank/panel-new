@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="view-edit-dealer.css">
+    <link rel="stylesheet" href="view-edit-party.css">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>VIEW/EDIT DEALER</title> 
+    <title>VIEW/EDIT PARTY</title> 
 </head>
 <body>
     <nav>
@@ -153,63 +153,79 @@
                                 <img src="/Images/loupe.png" alt="" style="width: 25px; height: 25px;">
                             </div>
                         </div>
-                        <p class="temp2">DEALER LIST</p>
+                        <p class="temp2">PARTY LIST</p>
                             <table>
                                 <thead>
                                     <tr>
                                         <th>Sr No.</th>
-                                        <th>DEALER NAME</th>
+                                        <th>PARTY NAME</th>
                                         <th>CONTACT NUMBER</th>
+                                        <th>ADDRESS</th>
                                         <th>CITY</th>
-                                        <th>PARTNERSHIP</th>
-                                        <th>SITE NAME</th>
+                                        <th>PINCODE</th>
+                                        <th>OPENING BALANCE</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>VIJAY2</td>
-                                        <td>99999</td>
-                                        <td>₹10000</td>
+                                        <td>FIX2PLAY</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>RAM</td>
                                         <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>VIJAY2</td>
-                                        <td>99999</td>
-                                        <td>₹10000</td>
+                                        <td>BLACKGOLD</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>RAM</td>
                                         <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>VIJAY2</td>
-                                        <td>99999</td>
-                                        <td>₹10000</td>
+                                        <td>WORLD777</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>RAM</td>
                                         <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>VIJAY2</td>
-                                        <td>99999</td>
-                                        <td>₹10000</td>
+                                        <td>CRICBUZ</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>RAM</td>
                                         <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td>HDFC</td>
-                                        <td>VIJAY</td>
-                                        <td>VIJAY2</td>
-                                        <td>99999</td>
-                                        <td>₹10000</td>
+                                        <td>ALLPAANEL</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>RAM</td>
+                                        <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>WORLD2</td>
+                                        <td>2</td>
+                                        <td>INR</td>
+                                        <td>1</td>
+                                        <td>INR</td>
+                                        <td>RAM</td>
                                         <td onclick="popup()"><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                 </tbody>
@@ -227,13 +243,13 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="pop" id="popup">
                 <div class="main">
                     <div class="cardContainer">
                         <div class="card">
-                            <img src="/Images/dealer.png" alt="">
-                            <p class="temp">MODIFY DEALER</p>
+                            <img src="/Images/website.png" alt="">
+                            <p class="temp">MODIFY PARTY</p>
                             <div class="cross" onclick="cross()">
                                 <img src="/Images/cancel.png" alt="" style="width: 40px; height: 40px;">
                             </div>
@@ -244,27 +260,32 @@
                 <div class="box">
                     <form>
                         <div class="form-in">
-                            <label for="dealer-name">DEALER NAME</label>
-                            <input type="text" placeholder="Dealer Name" id="dealer-name">
+                            <label for="party-name">PARTY NAME</label>
+                            <input type="text" placeholder="Party Name" id="party-name">
                         </div>
                         <div class="form-in">
                             <label for="contact">CONTACT NUMBER</label>
                             <input type="text" placeholder="Contact Number" id="contact">
                         </div>
                         <div class="form-in">
+                            <label for="address">ADDRESS</label>
+                            <!-- <input type="text" placeholder="Address" id="address"> -->
+                            <textarea name="" id="address" cols="30" rows="4"></textarea>
+                        </div>
+                        <div class="form-in">
                             <label for="city">CITY</label>
                             <input type="text" placeholder="City" id="city">
                         </div>
                         <div class="form-in">
-                            <label for="partnership">PARTNERSHIP</label>
-                            <input type="text" placeholder="Partnership" id="partnership">
+                            <label for="pincode">PINCODE</label>
+                            <input type="text" placeholder="Pincode" id="pincode">
                         </div>
                         <div class="form-in">
-                            <label for="site-name">SITE NAME</label>
-                            <input type="text" placeholder="Site Name" id="site-name">
+                            <label for="opening-balance">OPENING BALANCE</label>
+                            <input type="text" placeholder="Opening Balance" id="opening-balance">
                         </div>
             
-                        <button class="bt" style="display: flex; align-items: center; justify-content: center; gap: 10px;"><img src="/Images/checked.png" alt="" style="width: 25px; height: 25px;">SUBMIT</button>
+                        <button class="bt" style="display: flex; align-items: center; justify-content: center; gap: 10px;"><img src="/Images/checked.png" alt="" style="width: 25px; height: 25px;"> SUBMIT</button>
                     </form>
                 </div>
             </div>

@@ -482,11 +482,10 @@ nav.close ~ .dashboard .top{
     outline: none;
   }
 
- /* User List */
-
-.main2{
+ /* Content Box */
+.main{
     display: flex;
-    padding: 50px;
+    padding: 30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -494,18 +493,17 @@ nav.close ~ .dashboard .top{
     width: 100%;
 }
 
-.cardContainer2 {
+.cardContainer {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
   }
   
-  .card2 {
+  .card {
     position: relative;
-    width: 100%;
-    height: auto;
+    width: 450px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -519,214 +517,120 @@ nav.close ~ .dashboard .top{
     gap: 10px;
   }
 
-  .card2 img{
+  .card img{
     width: 70px;
     height: 70px;
   }
   
-  .temp2 {
+  .temp {
     font-size: 2.5em;
     color: white;
   }
-
-  .temp1 {
-    font-size: 1.2em;
-    color: white;
-  }
-
-  /* Table */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  margin: auto;
-}
-th,
-td {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-th {
-  text-align: center;
-}
-thead th {
-  background-color: #55608f;
-}
-tbody td {
-  position: relative;
-  text-align: center;
-}
-tbody td input{
-    width: 100%;
-    padding: 5px;
-  }
-
-/* Search Box */
-
-.search{
+  
+  .cardContainer::before {
+    width: 50px;
+    height: 50px;
+    content: "";
     position: absolute;
-    top: 12px;
-    right: 10px;
-}
-
-.search input{
-    width: 220px;
-    padding: 8px 12px;
-    border-radius: 20px;
-    border: 2px solid grey;
-}
-
-.search-round{
-    width: 42px;
-    height: 42px;
-    background-color: #a4508b;
-    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    background-color: rgb(144, 161, 255);
+    z-index: -1;
     border-radius: 50%;
+    right: 20px;
+    top: 20px;
+    transition: all 1s;
+  }
+
+  .cardContainer::after {
+    width: 50px;
+    height: 50px;
+    content: "";
     position: absolute;
-    top: -1px;
-    right: 0px;
+    background-color: rgb(144, 161, 255);
+    z-index: -1;
+    border-radius: 50%;
+    left: 20px;
+    top: 20px;
+    transition: all 1s;
+  }
+  
+  .cardContainer:hover::before {
+    transform: translate(-20px ,20px);
+  }
+
+  .cardContainer:hover::after {
+    transform: translate(20px ,20px);
+  }
+
+/* Form */
+
+.box{
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-/* Button */
+form{
+    height: auto;
+    width: 450px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 30px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
 
-button {
-  align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: Phantomsans, sans-serif;
-  font-size: 18px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 100px;
-  padding: 3px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all .3s;
- }
- 
- button:active,
- button:hover {
-  outline: 0;
- }
- 
- button span {
-  background-color: rgb(5, 6, 45);
-  padding: 10px 20px;
-  border-radius: 6px;
-  width: 100%;
-  height: 100%;
-  transition: 300ms;
-  display: flex;
-  align-items: center;
-  gap: 10px;
- }
- 
- button:hover span {
-  background: none;
- }
- 
- button:active {
-  transform: scale(0.9);
- }
+.form-in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px;
+}
 
- .export{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 10px;
- }
-
- input{
+label{
     /* display: block; */
-    width: 400px;
-    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    /* display: block; */
+    height: 40px;
+    width: 55%;
+    background-color: rgba(255,255,255,0.07);
     border-radius: 3px;
     padding: 0 10px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
 }
 ::placeholder{
-    color: #303030;
+    color: #e5e5e5;
+}
+button{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Toggle Box */
+button a{
+    color: black;
+    text-decoration: none;
+}
 
-.checkbox {
-    width: 223px;
-    height: 60px;
-    background-color: #0a1929;
-    color: #fff;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  #checkbox_toggle {
-    display: none;
-  }
-  
-  .checkbox .toggle {
-    width: 105px;
-    height: 50px;
-    position: absolute;
-    border-radius: 30px;
-    left: 5px;
-    cursor: pointer;
-    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
-    box-shadow: -0px -0px 10px #8983F7, -0px -0px 30px #8983F7;
-    transition: 0.4s;
-    /* box-shadow: 0px 0px 10px rgb(255, 255, 20), 0px 0px 30px rgb(255, 255, 20); */
-  }
-  
-  .checkbox .slide {
-    width: 230px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
-  }
-  
-  .checkbox .slide .text {
-    font-size: 16px;
-    font-weight: 700;
-    z-index: 100;
-    cursor: pointer;
-  }
-  
-  .check:checked + .checkbox .slide .toggle {
-    transform: translateX(105px);
-    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
-    box-shadow: -0px -0px 10px #8983F7, -0px -0px 30px #8983F7;
-  }
-  
-  .check:checked + .checkbox .slide {
-    background-color: #0a1929;
-    color: #fff;
-  }
-
-  .hide{
-    display: none;
-  }
-
-  .dropdown-container1 {
+.dropdown-container1 {
     display: none;
     position: absolute;
     right: 0px;

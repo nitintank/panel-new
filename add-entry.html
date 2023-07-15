@@ -64,31 +64,34 @@
                     </a></li>
                 <div class="dropdown-container">
                     <a href="add-party.html">ADD PARTY</a>
+                    <a href="view-edit-party.html">VIEW/EDIT PARTY</a>
                     <a href="add-expences.html">ADD EXPENCES</a>
                 </div>
                 <li class="dropdown-btn"><a href="#">
                         <i class="uil uil-money-withdrawal"></i>
                         <span class="link-name">TRANSACTION</span>
                     </a></li>
-                <div class="dropdown-container">
-                    <a href="add-entry.html">ASSIGN SITES/BANKS</a>
-                    <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
-                    <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
-                    <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
-                    <a href="add-journal-entry.html">ADD JOURNAL ENTRY</a>
-                    <a href="chip-management.html">CHIP MANAGEMENT</a>
-                </div>
+                    <div class="dropdown-container">
+                        <a href="add-entry.html">ASSIGN SITES/BANKS</a>
+                        <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
+                        <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
+                        <a href="settlement-entry.html">SETTLEMENT ENTRY</a>
+                        <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
+                        <a href="add-journal-entry.html">ADD JOURNAL ENTRY</a>
+                        <a href="chip-management.html">CHIP MANAGEMENT</a>
+                    </div>
                 <li class="dropdown-btn"><a href="#">
                         <i class="uil uil-file-graph"></i>
                         <span class="link-name">REPORT</span>
                     </a></li>
                 <div class="dropdown-container">
                     <a href="free-chips-report.html">FREE CHIPS REPORT</a>
+                    <a href="settlement-report.html">SETTLEMENT REPORT</a>
                     <!-- <a href="entry-report.html">ENTRY REPORT</a> -->
                     <!-- <a href="client-trf-report.html">CLIENT TRF REPORT</a> -->
                     <a href="expences-report.html">EXPENCES REPORT</a>
                     <a href="contra-report.html">CONTRA REPORT</a>
-                    <a href="bank-ledger-report.html">BANK LEDGER REPORT</a>
+                    <a href="bank-ledger-report.html">FINANCIAL REPORT</a>
                     <!-- <a href="bonus-report.html">BONUS REPORT</a> -->
                     <a href="journal-report.html">JOURNAL REPORT</a>
                 </div>
@@ -122,15 +125,18 @@
                 <i class="uil uil-search"></i>
                 <input type="text" placeholder="Search here...">
             </div>
-            
-            <div style="position: relative;">
-                <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
-                <div class="dropdown-container1">
-                    <div class="cardContainer5">
-                        <div class="card5" style="height: 150px;">
-                            <a href="/login-history.html">LOGIN HISTORY</a>
-                            <a href="/change-password.html">CHANGE PASSWORD</a>
-                            <a href="#">LOG OUT <i class="uil uil-signout"></i></a>
+
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/wallet.html"><img src="/Images/wallet.png" alt=""></a>
+                <div style="position: relative;">
+                    <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
+                    <div class="dropdown-container1">
+                        <div class="cardContainer5">
+                            <div class="card5" style="height: 150px;">
+                                <a href="/login-history.html">LOGIN HISTORY</a>
+                                <a href="/change-password.html">CHANGE PASSWORD</a>
+                                <a href="#">LOG OUT <i class="uil uil-signout"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,6 +163,7 @@
                                         <th>MASTER NAME</th>
                                         <th>USER NAME</th>
                                         <th>SITE NAME</th>
+                                        <th>SHARING</th>
                                         <th>SUBMIT</th>
                                     </tr>
                                 </thead>
@@ -166,8 +173,9 @@
                                         <td><input type="text" placeholder="Master Name"></td>
                                         <td><input type="text" placeholder="Username"></td>
                                         <td><input type="text" placeholder="Site Name"></td>
+                                        <td><input type="text" placeholder="Sharing"></td>
                                         <td><button>
-                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">ASSIGN</span>
+                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">SUBMIT</span>
                                         </button></td>
                                     </tr>
                                 </tbody>
@@ -194,7 +202,7 @@
                                         <td><input type="text" placeholder="User Name"></td>
                                         <td><input type="text" placeholder="Bank Name"></td>
                                         <td><button>
-                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">ADD</span>
+                                            <span class="text"><img src="/Images/plus.png" alt="" style="width: 20px; height: 20px;">SUBMIT</span>
                                         </button></td>
                                     </tr>
                                 </tbody>
@@ -221,6 +229,7 @@
                                         <th>MASTER NAME</th>
                                         <th>USERNAME</th>
                                         <th>SITE NAME</th>
+                                        <th>SHARING</th>
                                         <th>EDIT</th>
                                     </tr>
                                 </thead>
@@ -231,6 +240,7 @@
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
                                         <td>99999</td>
+                                        <td>80</td>
                                         <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
@@ -239,6 +249,7 @@
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
                                         <td>99999</td>
+                                        <td>80</td>
                                         <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
@@ -247,6 +258,7 @@
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
                                         <td>99999</td>
+                                        <td>80</td>
                                         <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
@@ -255,6 +267,7 @@
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
                                         <td>99999</td>
+                                        <td>80</td>
                                         <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                     <tr>
@@ -263,6 +276,7 @@
                                         <td>HDFC</td>
                                         <td>VIJAY</td>
                                         <td>99999</td>
+                                        <td>80</td>
                                         <td><img src="/Images/edit.png" alt="" style="width: 35px; height: 35px;"></td>
                                     </tr>
                                 </tbody>

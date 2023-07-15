@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="add-party.css">
-     
+    <link rel="stylesheet" href="add-expences.css">
+
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>ADD PARTY</title> 
+    <title>ADD Expences</title>
 </head>
+
 <body>
     <nav>
         <a href="/index.html" style="text-decoration: none;">
@@ -64,31 +66,34 @@
                     </a></li>
                 <div class="dropdown-container">
                     <a href="add-party.html">ADD PARTY</a>
+                    <a href="view-edit-party.html">VIEW/EDIT PARTY</a>
                     <a href="add-expences.html">ADD EXPENCES</a>
                 </div>
                 <li class="dropdown-btn"><a href="#">
                         <i class="uil uil-money-withdrawal"></i>
                         <span class="link-name">TRANSACTION</span>
                     </a></li>
-                <div class="dropdown-container">
-                    <a href="add-entry.html">ASSIGN SITES/BANKS</a>
-                    <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
-                    <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
-                    <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
-                    <a href="add-journal-entry.html">ADD JOURNAL ENTRY</a>
-                    <a href="chip-management.html">CHIP MANAGEMENT</a>
-                </div>
+                    <div class="dropdown-container">
+                        <a href="add-entry.html">ASSIGN SITES/BANKS</a>
+                        <a href="deassign-banks.html">DE-ASSIGN BANKS</a>
+                        <a href="add-free-chips.html">FREE CHIPS ENTRY</a>
+                        <a href="settlement-entry.html">SETTLEMENT ENTRY</a>
+                        <a href="add-contra-entry.html">ADD CONTRA ENTRY</a>
+                        <a href="add-journal-entry.html">ADD JOURNAL ENTRY</a>
+                        <a href="chip-management.html">CHIP MANAGEMENT</a>
+                    </div>
                 <li class="dropdown-btn"><a href="#">
                         <i class="uil uil-file-graph"></i>
                         <span class="link-name">REPORT</span>
                     </a></li>
                 <div class="dropdown-container">
                     <a href="free-chips-report.html">FREE CHIPS REPORT</a>
+                    <a href="settlement-report.html">SETTLEMENT REPORT</a>
                     <!-- <a href="entry-report.html">ENTRY REPORT</a> -->
                     <!-- <a href="client-trf-report.html">CLIENT TRF REPORT</a> -->
                     <a href="expences-report.html">EXPENCES REPORT</a>
                     <a href="contra-report.html">CONTRA REPORT</a>
-                    <a href="bank-ledger-report.html">BANK LEDGER REPORT</a>
+                    <a href="bank-ledger-report.html">FINANCIAL REPORT</a>
                     <!-- <a href="bonus-report.html">BONUS REPORT</a> -->
                     <a href="journal-report.html">JOURNAL REPORT</a>
                 </div>
@@ -122,15 +127,18 @@
                 <i class="uil uil-search"></i>
                 <input type="text" placeholder="Search here...">
             </div>
-            
-            <div style="position: relative;">
-                <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
-                <div class="dropdown-container1">
-                    <div class="cardContainer5">
-                        <div class="card5" style="height: 150px;">
-                            <a href="/login-history.html">LOGIN HISTORY</a>
-                            <a href="/change-password.html">CHANGE PASSWORD</a>
-                            <a href="#">LOG OUT <i class="uil uil-signout"></i></a>
+
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/wallet.html"><img src="/Images/wallet.png" alt=""></a>
+                <div style="position: relative;">
+                    <img src="/Images/profile.jpg" alt="" class="dropdown-btn" style="cursor: pointer;">
+                    <div class="dropdown-container1">
+                        <div class="cardContainer5">
+                            <div class="card5" style="height: 150px;">
+                                <a href="/login-history.html">LOGIN HISTORY</a>
+                                <a href="/change-password.html">CHANGE PASSWORD</a>
+                                <a href="#">LOG OUT <i class="uil uil-signout"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,24 +146,45 @@
         </div>
 
         <div class="dash-content">
-            <div class="main">
-                <div class="cardContainer">
-                    <div class="card">
-                        <img src="/Images/expences.png" alt="">
-                        <p class="temp">ADD NEW EXPENCES</p>
+            <div>
+                <div class="main">
+                    <div class="cardContainer">
+                        <div class="card">
+                            <img src="/Images/expences.png" alt="">
+                            <p class="temp">ADD NEW EXPENCES</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="box">
+                    <form>
+                        <div class="form-in">
+                            <label for="expences-name">EXPENCES NAME</label>
+                            <input type="text" placeholder="Expences Name" id="expences-name">
+                        </div>
+
+                        <button>CREATE EXPENCES</button>
+                    </form>
+                </div>
             </div>
-        
-            <div class="box">
-                <form>
-                    <div class="form-in">
-                        <label for="expences-name">EXPENCES NAME</label>
-                        <input type="text" placeholder="Expences Name" id="expences-name">
-                    </div>
-        
-                    <button>CREATE EXPENCES</button>
-                </form>
+            <div>
+                <div class="box">
+                    <form>
+                        <button style="margin-top: 0px;">EXPENCES LIST</button>
+                        <ul style="margin-top: 15px; list-style: none; display: flex; flex-direction: column; align-items: center;">
+                            <li>1. MEGA EXPENCES</li>
+                            <li>2. ULTRA EXPENCES</li>
+                            <li>3. MEGA EXPENCES</li>
+                            <li>4. ULTRA EXPENCES</li>
+                            <li>5. MEGA EXPENCES</li>
+                            <li>6. ULTRA EXPENCES</li>
+                            <li>7. MEGA EXPENCES</li>
+                            <li>8. ULTRA EXPENCES</li>
+                            <li>9. MEGA EXPENCES</li>
+                            <li>10. ULTRA EXPENCES</li>
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -165,18 +194,19 @@
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
-        
+
         for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-            } else {
-              dropdownContent.style.display = "block";
-            }
-          });
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
         }
-        </script>
+    </script>
 </body>
+
 </html>

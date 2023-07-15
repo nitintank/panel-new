@@ -545,7 +545,7 @@ table {
 }
 th,
 td {
-  padding: 20px;
+  padding: 20px 5px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
@@ -568,7 +568,7 @@ tbody td input{
 
 .search{
     position: absolute;
-    top: 12px;
+    top: 30px;
     right: 10px;
 }
 
